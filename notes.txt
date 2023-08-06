@@ -1,0 +1,155 @@
+#####LOG IN
+#name_1 = input("Enter name: ")
+# password_1 = input("Enter password: ")
+
+# def check_credentials(name, password):
+#   mycursor.execute("SELECT password FROM users WHERE name = %s", (name,))
+#   fetched_password = mycursor.fetchone()
+   
+
+#   if fetched_password is None:
+#     return False
+#   else:
+#     return fetched_password[0] == password
+
+# def login():
+#   if check_credentials(name_1, password_1):
+#     print("Login successful")
+#   else:
+#     print("Login failed")
+
+# login()
+
+
+
+
+SCISSORS, PAPER, ROCK
+import random
+
+user_wins = 0
+computer_win = 0
+
+options = ["SCISSORS","PAPER","ROCK"]
+
+while True:
+    user_input = input("Type SCISSORS/ PAPER/ ROCK or Q to quit: ").lower()
+    if user_input == Q:
+        break
+    
+    if user_input not in options:
+        continue
+
+    random_number = random.randint(0, 2)
+    computer_pick = options[random_number]
+
+    if user_input = "PAPER" and computer_pick = "scissors"
+    print("YOU WON!)
+    user_wins += 1
+
+    elif user_input = "SCISSORS" and computer_pick = "ROCK"
+    print("YOU WON!")
+    user_wins += 1
+
+    elif user_input = "ROCK" and computer_pick = "PAPER"
+    print("YOU WON!")
+    user_wins += 1
+
+    else:
+        print("YOU LOSS")
+        computer_win += 1
+
+print("GOOD BYE")
+
+
+
+RANDOM GUESS GAME
+import random
+
+def guess_game():
+    data = random.randint(1, 3)
+    attempt = 3
+
+    def number_words(num):
+        numAlpha = {1: "one",
+                    2: "two",
+                    3: "three"}
+        return numAlpha.get(num, str(num))
+
+    while attempt > 0:
+        guess_number = int(input("Enter number! "))
+
+        if guess_number == data:
+            print("YOU WON!! on", number_words(attempt), "attempt(s)")
+            break
+        elif guess_number > data:
+            print("Guess is high the correct number is", data)
+        else:
+            print("Guess is low  the correct number is ", data)
+
+        attempt -= 1
+        if attempt > 0:
+            print(attempt, "attempt(s) left")
+        else:
+            print("Attempts exhausted You Loss!!")
+            break
+     
+guess_game()
+
+
+
+
+# attempts
+# reduce lives after every failed attempts
+# print the number of attempt won and show it in words
+
+
+# print("Welcome to code quiz game")
+
+# decision = input("Do you want to play? ").lower()
+# score = 0
+# attempts = 3
+
+# if decision != "yes":
+#     print("EXIT")
+#     quit()
+# else:
+#     print("START")
+
+# while score > 0:
+#     score += 1
+#     question = input("What is CPU? ")
+#     answer = "Central Processing Unit".lower()
+
+#     if question == answer:
+#         print("Correct! move to next level")
+#     else:
+#         print("wrong! you lost")
+#         print(f"you scored {str(score)} out of 4")
+#         quit()
+
+#     question = input("What is GUI? ")
+#     answer = "graphic user interface".lower()
+#     if question == answer:
+#         print("Correct! move to next level")
+#     else:
+#         print("wrong! you lost")
+#         print(f"you scored {str(score)} out of 4")
+#         quit()
+
+#     question = input("What is RAM? ")
+#     answer = "Random Access Memory".lower()
+#     if question == answer:
+#         print("Correct! move to next level")
+#     else:
+#         print("wrong! you lost")
+#         print(f"you scored {str(score)} out of 4")
+#         quit()
+
+#     question = input("What is ROM? ")
+#     answer = "Read Only Memory".lower()
+#     if question == answer:
+#         print(f"you scored {str(score)} out of 4")
+#         print("Congratulations! YOU WON!!")
+#     else:
+#         print("wrong! you lost")
+#         print(f"you scored {str(score)} out of 4")
